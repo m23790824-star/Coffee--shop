@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aroma Craft — Artisanal Coffee & Bakery</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              light: '#fdfbf7',
+              accent: '#d97706',
+              dark: '#271c19',
+              card: '#fffcf7'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brand-light text-slate-800 font-sans antialiased">
+
+  <!-- Header / Navigation -->
+  <header class="fixed top-0 left-0 right-0 bg-brand-light/90 backdrop-blur-md z-50 border-b border-amber-900/10">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-2xl font-bold tracking-wide text-brand-dark flex items-center gap-2">
+        ☕ <span>AromaCraft</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700">
+        <a href="#hero" class="hover:text-brand-accent transition">Home</a>
+        <a href="#about" class="hover:text-brand-accent transition">About</a>
+        <a href="#menu" class="hover:text-brand-accent transition">Menu</a>
+        <a href="#contact" class="hover:text-brand-accent transition">Contact</a>
+      </nav>
+
+      <a href="#menu" class="hidden md:inline-block bg-brand-accent hover:bg-amber-600 text-white font-medium px-5 py-2 rounded-full text-sm transition">
+        Order Now
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-2xl text-brand-dark focus:outline-none">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Nav Links -->
+    <div id="mobile-menu" class="hidden md:hidden bg-brand-light border-b border-amber-900/10 px-6 py-4 flex flex-col gap-4 text-sm font-medium">
+      <a href="#hero" class="mobile-link">Home</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#menu" class="mobile-link">Menu</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="min-h-screen flex items-center pt-20 bg-gradient-to-b from-amber-50/50 to-brand-light">
+    <div class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6">
+        <span class="text-xs font-semibold uppercase tracking-widest text-brand-accent bg-amber-100 px-3 py-1 rounded-full">Artisanal Roast</span>
+        <h1 class="text-4xl md:text-6xl font-extrabold text-brand-dark leading-tight">
+          Freshly Brewed Happiness in Every Cup.
+        </h1>
+        <p class="text-slate-600 text-base md:text-lg leading-relaxed">
+          Savor organic single-origin coffee roasted daily in-house, paired with handcrafted pastries made with love.
+        </p>
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="#menu" class="bg-brand-dark hover:bg-black text-white px-7 py-3 rounded-full font-medium transition shadow-lg">
+            Explore Menu
+          </a>
+          <a href="#contact" class="border border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white px-7 py-3 rounded-full font-medium transition">
+            Book a Table
+          </a>
+        </div>
+      </div>
+      
+      <div class="relative flex justify-center">
+        <div class="w-72 h-72 md:w-96 md:h-96 rounded-full bg-amber-200/50 absolute -z-10 blur-2xl"></div>
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" alt="Coffee Cup" class="rounded-2xl shadow-2xl object-cover w-full max-w-md h-[380px]">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div class="p-6 rounded-xl border border-slate-100 space-y-3">
+        <div class="text-3xl">🫘</div>
+        <h3 class="font-bold text-lg text-brand-dark">Ethically Sourced</h3>
+        <p class="text-slate-600 text-sm">We partner directly with small-farm coffee growers around the globe.</p>
+      </div>
+      <div class="p-6 rounded-xl border border-slate-100 space-y-3">
+        <div class="text-3xl">🔥</div>
+        <h3 class="font-bold text-lg text-brand-dark">Fresh In-House Roast</h3>
+        <p class="text-slate-600 text-sm">Our beans are micro-roasted weekly to ensure peak flavor profiles.</p>
+      </div>
+      <div class="p-6 rounded-xl border border-slate-100 space-y-3">
+        <div class="text-3xl">🥐</div>
+        <h3 class="font-bold text-lg text-brand-dark">Freshly Baked Daily</h3>
+        <p class="text-slate-600 text-sm">Enjoy fresh croissants and artisanal pastries baked every morning.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Cards Section -->
+  <section id="menu" class="py-20 max-w-6xl mx-auto px-6">
+    <div class="text-center max-w-xl mx-auto mb-12">
+      <span class="text-xs font-semibold uppercase tracking-widest text-brand-accent">Our Specialties</span>
+      <h2 class="text-3xl font-extrabold text-brand-dark mt-2">Popular Menu Items</h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Card 1 -->
+      <div class="bg-brand-card border border-amber-900/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+        <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80" alt="Espresso" class="w-full h-48 object-cover">
+        <div class="p-5 space-y-2">
+          <div class="flex justify-between items-center">
+            <h3 class="font-bold text-lg text-brand-dark">Classic Espresso</h3>
+            <span class="font-semibold text-brand-accent">$3.50</span>
+          </div>
+          <p class="text-slate-600 text-sm">Rich and concentrated shot extracted from our signature dark roast.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-brand-card border border-amber-900/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+        <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=600&q=80" alt="Cappuccino" class="w-full h-48 object-cover">
+        <div class="p-5 space-y-2">
+          <div class="flex justify-between items-center">
+            <h3 class="font-bold text-lg text-brand-dark">Velvet Cappuccino</h3>
+            <span class="font-semibold text-brand-accent">$4.75</span>
+          </div>
+          <p class="text-slate-600 text-sm">Equal parts espresso, steamed milk, and silky micro-foam topped with cocoa.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-brand-card border border-amber-900/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+        <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=80" alt="Iced Latte" class="w-full h-48 object-cover">
+        <div class="p-5 space-y-2">
+          <div class="flex justify-between items-center">
+            <h3 class="font-bold text-lg text-brand-dark">Caramel Iced Latte</h3>
+            <span class="font-semibold text-brand-accent">$5.25</span>
+          </div>
+          <p class="text-slate-600 text-sm">Chilled espresso over milk, infused with handcrafted vanilla caramel syrup.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contact" class="py-20 bg-amber-100/40 border-t border-amber-900/10">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-extrabold text-brand-dark">Get in Touch</h2>
+        <p class="text-slate-600 text-sm mt-2">Have a question or want to reserve a table? Send us a message!</p>
+      </div>
+
+      <form id="contact-form" class="bg-white p-8 rounded-2xl border border-amber-900/10 shadow-sm space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Your Name</label>
+            <input type="text" required placeholder="John Doe" class="w-full p-3 rounded-lg border border-slate-200 focus:outline-none focus:border-brand-accent text-sm">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Email Address</label>
+            <input type="email" required placeholder="john@example.com" class="w-full p-3 rounded-lg border border-slate-200 focus:outline-none focus:border-brand-accent text-sm">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Message</label>
+          <textarea rows="4" required placeholder="Write your message here..." class="w-full p-3 rounded-lg border border-slate-200 focus:outline-none focus:border-brand-accent text-sm"></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-brand-dark hover:bg-black text-white font-medium py-3 rounded-lg text-sm transition">
+          Send Message
+        </button>
+
+        <p id="form-msg" class="hidden text-center text-sm font-medium text-emerald-600 pt-2">
+          Thank you! Your message has been sent successfully.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brand-dark text-slate-400 py-8 text-center text-xs border-t border-slate-800">
+    <p>© 2026 AromaCraft Coffee. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Form Submission Handling
+    const contactForm = document.getElementById('contact-form');
+    const formMsg = document.getElementById('form-msg');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      formMsg.classList.remove('hidden');
+      contactForm.reset();
+      setTimeout(() => {
+        formMsg.classList.add('hidden');
+      }, 4000);
+    });
+  </script>
+</body>
+</html>
